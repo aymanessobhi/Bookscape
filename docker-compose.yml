@@ -1,0 +1,33 @@
+  services :
+    db:
+      container_name: mysql-bsn
+      image: mysql:5.7
+      restart: unless-stopped
+      environment:
+        MYSQL_DATABASE: 'bookscapedb'
+        MYSQL_USER: 'bookscape'
+        MYSQL_PASSWORD: 'bookscape!'
+        # Password for root access
+        MYSQL_ROOT_PASSWORD: 'password'
+      ports:
+        - '3306:3306'
+      expose:
+        # Opens port 3306 on the container
+        - '3306'
+      volumes:
+        - my-db:/var/lib/mysql
+      networks:
+        - spring-demo
+
+    mail-dev:
+      container_name: mail-dev-bs
+      image : maildev/maildev
+      ports:
+        - 1080/1080
+        - 1025/1025
+    networks:
+      spring-demo:
+        driver: bridge
+    volumes:
+      my-db:
+        driver: local
