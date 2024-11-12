@@ -16,8 +16,8 @@ public class BookService implements UserDetailsService {
     private final UserRepository userRepository;
     @Override
     @Transactional //when i load the user, i want to load the roles of the authorities with it
-    public UserDetails loadUserByUsername(String userEamil) throws UsernameNotFoundException {
-        return userRepository.findByEmail(userEamil)
+    public UserDetails loadUserByUsername(String userEmail) throws UsernameNotFoundException {
+        return userRepository.findByEmail(userEmail)
                 .orElseThrow(() -> new UsernameNotFoundException("User not found"));
     }
 }
