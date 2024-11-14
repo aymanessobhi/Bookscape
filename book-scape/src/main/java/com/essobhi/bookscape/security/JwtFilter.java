@@ -17,6 +17,8 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
 
+import static org.springframework.http.HttpHeaders.AUTHORIZATION;
+
 @Service
 @RequiredArgsConstructor
 public class JwtFilter extends OncePerRequestFilter {
@@ -30,7 +32,7 @@ public class JwtFilter extends OncePerRequestFilter {
             filterChain.doFilter(request,response);
             return;
         }
-        final String authHeader = request.getHeader(HttpHeaders.AUTHORIZATION);
+        final String authHeader = request.getHeader(AUTHORIZATION);
         final String jwt;
         final String userEmail;
         if(authHeader == null || !authHeader.startsWith("Bearer ")){
