@@ -9,15 +9,19 @@ import com.essobhi.bookscape.enums.EmailTemplateName;
 import com.essobhi.bookscape.repository.RoleRepository;
 import com.essobhi.bookscape.repository.TokenRepository;
 import com.essobhi.bookscape.repository.UserRepository;
+import com.essobhi.bookscape.security.JwtService;
 import com.essobhi.bookscape.service.AuthenticationService;
 import jakarta.mail.MessagingException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.security.SecureRandom;
 import java.time.LocalDateTime;
+import java.util.HashMap;
 import java.util.List;
 
 @Service
@@ -28,6 +32,8 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     private final PasswordEncoder passwordEncoder;
     private final TokenRepository tokenRepository;
     private final EmailServiceImpl emailService;
+    private final AuthenticationManager authenticationManager;
+    private final JwtService jwtService;
     @Value("${application.mailing.frontend.activation-url}")
     private String activationUrl;
     @Override
@@ -54,7 +60,21 @@ public class AuthenticationServiceImpl implements AuthenticationService {
 
     @Override
     public AuthResponse authenticate(AuthRequest request) {
-        return null;
+        var auth = authenticationManager.authenticate(
+                new UsernamePasswordAuthenticationToken(
+                        request.getEmail(),
+                        request.getPassword()
+                )
+        );
+        var claims = new HashMap<String, Object>();
+        var user = ((User) auth.getPrincipal());
+        claims.put("fullName",user.fullName());
+        var jwtToken = jwtService.generateToken(claims,user);
+        return AuthResponse.builder()
+                .fullName(user.fullName())
+                .token(jwtToken)
+                .email(user.getEmail())
+                .build();
     }
 
     @Override
