@@ -12,4 +12,5 @@ public interface AuthenticationService {
     //void activateAccount(String token);
     void sendValidationEmail(User user) throws MessagingException;
 
+    void activateAccount(String token) throws MessagingException;
 }
