@@ -1,6 +1,6 @@
 CREATE database bookscapedb;
-CREATE USER 'bookscapedb'@'localhost' IDENTIFIED  BY 'bookscapedb!';
+CREATE USER 'bookscape'@'localhost' IDENTIFIED  BY 'bookscape!';
 
-GRANT ALL PRIVILEGES ON gymcomdb.* TO 'bookscapedb'@'localhost';
+GRANT ALL PRIVILEGES ON bookscapedb.* TO 'bookscape'@'localhost';
 
 FLUSH PRIVILEGES;
