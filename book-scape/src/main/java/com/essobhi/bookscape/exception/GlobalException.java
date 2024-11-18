@@ -6,6 +6,7 @@ import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.authentication.LockedException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -13,6 +14,7 @@ import java.util.Set;
 import static com.essobhi.bookscape.enums.BusinessErrorCode.*;
 import static org.springframework.http.HttpStatus.*;
 
+@RestControllerAdvice
 public class GlobalException {
 
     @ExceptionHandler(LockedException.class)
