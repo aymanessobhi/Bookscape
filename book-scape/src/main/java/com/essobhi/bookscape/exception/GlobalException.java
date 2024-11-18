@@ -75,7 +75,7 @@ public class GlobalException {
         // log the exception
         exp.printStackTrace();
         return ResponseEntity
-                .status(INTERNAL_SERVER_ERROR)q
+                .status(INTERNAL_SERVER_ERROR)
                 .body(
                         ExceptionResponse.builder()
                                 .businessErrorDescription("Internal error, contact the admin")
