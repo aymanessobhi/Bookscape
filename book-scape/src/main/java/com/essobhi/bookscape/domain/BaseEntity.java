@@ -12,17 +12,31 @@ import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
-import javax.annotation.processing.SupportedSourceVersion;
 import java.time.LocalDateTime;
 
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
 @SuperBuilder
-@Entity
-@Table(name="BS_FEEDBACK")
-public class Feedback extends BaseEntity<Feedback>{
-    private Double note;
-    private String comment;
+@NoArgsConstructor
+@AllArgsConstructor
+@MappedSuperclass
+@EntityListeners(AuditingEntityListener.class)
+public abstract class BaseEntity<E> {
+    @Id
+    @GeneratedValue
+    private Integer id;
+
+    @CreatedDate
+    @Column(nullable = false, updatable = false)
+    private LocalDateTime createdDate;
+    @LastModifiedDate
+    @Column(insertable = false)
+    private LocalDateTime lastModifiedDate;
+
+    @CreatedBy
+    @Column(nullable = false,updatable = false)
+    private Integer createdBy;
+    @LastModifiedBy
+    @Column(insertable = false)
+    private Integer lastModifiedBy;
 }
