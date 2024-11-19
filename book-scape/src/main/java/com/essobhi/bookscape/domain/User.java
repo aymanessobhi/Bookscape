@@ -29,7 +29,7 @@ import java.util.stream.Collectors;
 public class User implements UserDetails, Principal {
     @Id
     @GeneratedValue
-    private Long id;
+    private Integer id;
     private String firstname;
     private String lastname;
     private LocalDate dateOfBirth;
