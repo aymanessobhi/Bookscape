@@ -10,4 +10,5 @@ public interface IBookService {
     BookDto save(BookDto dto, Authentication connectedUser);
     BookDto findById(Integer bookId);
     PageResponse<BookDto> findAllBooks(int page, int size, Authentication connectedUser);
+    PageResponse<BookDto> findAllBooksByOwner(int page, int size, Authentication connectedUser);
 }

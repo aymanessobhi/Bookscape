@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="257d9695-eaa4-4366-8991-d6e2040ee75f" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/dto/PageResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/specification/BookSpecification.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book-scape/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/BookScapeApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/BookScapeApplication.java" afterDir="false" />
@@ -101,7 +102,7 @@
       <workItem from="1731707389502" duration="8175000" />
       <workItem from="1731945026722" duration="325000" />
       <workItem from="1732030613933" duration="17684000" />
-      <workItem from="1732211468676" duration="4699000" />
+      <workItem from="1732211468676" duration="7065000" />
     </task>
     <servers />
   </component>

@@ -9,10 +9,18 @@ import com.essobhi.bookscape.repository.BookRepository;
 import com.essobhi.bookscape.service.IBookService;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
+
+import static com.essobhi.bookscape.specification.BookSpecification.withOwnerId;
 
 @Service
 @RequiredArgsConstructor
@@ -36,8 +44,42 @@ public class BookServiceImpl implements IBookService {
 
     @Override
     public PageResponse<BookDto> findAllBooks(int page, int size, Authentication connectedUser) {
-        return null;
+        User user = ((User) connectedUser.getPrincipal());
+        Pageable pageable = PageRequest.of(page, size, Sort.by("createdDate").descending());
+        Page<Book> books = bookRepository.findAllDisplayableBooks(pageable, user.getId());
+        List<BookDto> bookDto = books.stream()
+                .map(book -> bookMapper.toDto(book))
+                .collect(Collectors.toList());
+        return new PageResponse<>(
+                bookDto,
+                books.getNumber(),
+                books.getSize(),
+                books.getTotalElements(),
+                books.getTotalPages(),
+                books.isFirst(),
+                books.isLast()
+        );
     }
+
+    @Override
+    public PageResponse<BookDto> findAllBooksByOwner(int page, int size, Authentication connectedUser) {
+        User user = ((User) connectedUser.getPrincipal());
+        Pageable pageable = PageRequest.of(page, size, Sort.by("createdDate").descending());
+        Page<Book> books = bookRepository.findAll(withOwnerId(connectedUser.getName()), pageable);
+        List<BookDto> bookDto = books.stream()
+                .map(book -> bookMapper.toDto(book))
+                .collect(Collectors.toList());
+        return new PageResponse<>(
+                bookDto,
+                books.getNumber(),
+                books.getSize(),
+                books.getTotalElements(),
+                books.getTotalPages(),
+                books.isFirst(),
+                books.isLast()
+        );
+    }
+
 
 
 }
