@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="257d9695-eaa4-4366-8991-d6e2040ee75f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/dto/PageResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/specification/BookSpecification.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-scape/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/BookScapeApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/BookScapeApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/domain/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/domain/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/domain/Feedback.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/domain/Feedback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/security/BeanConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/security/BeanConfiguration.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,15 +24,15 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
         <option value="HTML File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/book-scape" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -92,7 +101,8 @@
       <workItem from="1731691134712" duration="6866000" />
       <workItem from="1731707389502" duration="8175000" />
       <workItem from="1731945026722" duration="325000" />
-      <workItem from="1732030613933" duration="7022000" />
+      <workItem from="1732030613933" duration="17684000" />
+      <workItem from="1732211468676" duration="7065000" />
     </task>
     <servers />
   </component>
