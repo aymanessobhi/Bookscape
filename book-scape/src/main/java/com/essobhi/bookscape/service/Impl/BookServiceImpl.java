@@ -3,6 +3,7 @@ package com.essobhi.bookscape.service.Impl;
 import com.essobhi.bookscape.domain.Book;
 import com.essobhi.bookscape.domain.User;
 import com.essobhi.bookscape.dto.BookDto;
+import com.essobhi.bookscape.dto.PageResponse;
 import com.essobhi.bookscape.mapper.BookMapper;
 import com.essobhi.bookscape.repository.BookRepository;
 import com.essobhi.bookscape.service.IBookService;
@@ -33,9 +34,10 @@ public class BookServiceImpl implements IBookService {
                 .orElseThrow(()-> new EntityNotFoundException("No book found  with the ID ::"+bookId)));
     }
 
-
-
-
+    @Override
+    public PageResponse<BookDto> findAllBooks(int page, int size, Authentication connectedUser) {
+        return null;
+    }
 
 
 }

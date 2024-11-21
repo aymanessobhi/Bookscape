@@ -1,5 +1,6 @@
 package com.essobhi.bookscape.controller;
 
+import com.essobhi.bookscape.domain.Book;
 import com.essobhi.bookscape.dto.BookDto;
 import com.essobhi.bookscape.service.IBookService;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -29,5 +30,12 @@ public class BookController {
         return ResponseEntity.ok(bookService.findById(bookId));
     }
 
-
+    @GetMapping
+    public ResponseEntity<PageResponse<BookDto>> findAllBooks(
+            @RequestParam(name = "page", defaultValue = "0", required = false) int page,
+            @RequestParam(name ="size", defaultValue = "10", required = false) int size,
+            Authentication connectedUser
+    ){
+        return ResponseEntity.ok(bookService.findAllBooks(page, size, connectedUser));
+    }
 }
