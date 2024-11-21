@@ -5,15 +5,14 @@ import jakarta.validation.constraints.NotNull;
 
 
 public class BookDto extends BaseDto<BookDto>{
-    @NotNull(message = "101")
-    @NotEmpty(message = "101")
+    private Integer id;
     private String title;
-    @NotNull(message = "102")
-    @NotEmpty(message = "102")
     private String authorName;
-    @NotNull(message = "103")
-    @NotEmpty(message = "103")
     private String isbn;
     private String synopsis;
+    private String owner;
+    private byte[] cover;
+    private double rate;
+    private boolean archived;
     private boolean shareable;
 }

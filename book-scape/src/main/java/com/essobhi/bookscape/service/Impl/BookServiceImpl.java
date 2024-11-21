@@ -6,9 +6,12 @@ import com.essobhi.bookscape.dto.BookDto;
 import com.essobhi.bookscape.mapper.BookMapper;
 import com.essobhi.bookscape.repository.BookRepository;
 import com.essobhi.bookscape.service.IBookService;
+import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -23,5 +26,16 @@ public class BookServiceImpl implements IBookService {
         Book savedBook =  bookRepository.save(book);
         return bookMapper.toDto(savedBook);
     }
+
+    @Override
+    public BookDto findById(Integer bookId) {
+        return bookMapper.toDto(bookRepository.findById(bookId)
+                .orElseThrow(()-> new EntityNotFoundException("No book found  with the ID ::"+bookId)));
+    }
+
+
+
+
+
 
 }
