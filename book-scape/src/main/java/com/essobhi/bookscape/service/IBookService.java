@@ -13,4 +13,5 @@ public interface IBookService {
     PageResponse<BookDto> findAllBooks(int page, int size, Authentication connectedUser);
     PageResponse<BookDto> findAllBooksByOwner(int page, int size, Authentication connectedUser);
     PageResponse<BorrowedBookDto> findAllBorrowedBooks(int page, int size, Authentication connectedUser);
+    PageResponse<BorrowedBookDto> findAllReturnedBooks(int page, int size, Authentication connectedUser);
 }

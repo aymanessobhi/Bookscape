@@ -105,5 +105,24 @@ public class BookServiceImpl implements IBookService {
 
     }
 
+    @Override
+    public PageResponse<BorrowedBookDto> findAllReturnedBooks(int page, int size, Authentication connectedUser) {
+        User user = ((User) connectedUser.getPrincipal());
+        Pageable pageable = PageRequest.of(page, size, Sort.by("createdDate").descending());
+        Page<BookTransactionHistory>  allBorrowedBooks = transactionHistoryRepository.findAllReturnedBooks(pageable, user.getId());
+        List<BorrowedBookDto> bookDto = allBorrowedBooks.stream()
+                .map(borrowedBook -> bookMapper.toDto(borrowedBook))
+                .collect(Collectors.toList());
+        return new PageResponse<>(
+                bookDto,
+                allBorrowedBooks.getNumber(),
+                allBorrowedBooks.getSize(),
+                allBorrowedBooks.getTotalElements(),
+                allBorrowedBooks.getTotalPages(),
+                allBorrowedBooks.isFirst(),
+                allBorrowedBooks.isLast()
+        );
+    }
+
 
 }
