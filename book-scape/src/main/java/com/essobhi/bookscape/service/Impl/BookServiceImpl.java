@@ -1,11 +1,14 @@
 package com.essobhi.bookscape.service.Impl;
 
 import com.essobhi.bookscape.domain.Book;
+import com.essobhi.bookscape.domain.BookTransactionHistory;
 import com.essobhi.bookscape.domain.User;
 import com.essobhi.bookscape.dto.BookDto;
+import com.essobhi.bookscape.dto.BorrowedBookDto;
 import com.essobhi.bookscape.dto.PageResponse;
 import com.essobhi.bookscape.mapper.BookMapper;
 import com.essobhi.bookscape.repository.BookRepository;
+import com.essobhi.bookscape.repository.TransactionHistoryRepository;
 import com.essobhi.bookscape.service.IBookService;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
@@ -25,6 +28,7 @@ import static com.essobhi.bookscape.specification.BookSpecification.withOwnerId;
 @Service
 @RequiredArgsConstructor
 public class BookServiceImpl implements IBookService {
+    private final TransactionHistoryRepository transactionHistoryRepository;
     private final BookRepository bookRepository;
     private final BookMapper bookMapper;
     @Override
@@ -80,6 +84,26 @@ public class BookServiceImpl implements IBookService {
         );
     }
 
+    @Override
+    public PageResponse<BorrowedBookDto> findAllBorrowedBooks(int page, int size, Authentication connectedUser) {
+        User user = ((User) connectedUser.getPrincipal());
+        Pageable pageable = PageRequest.of(page, size, Sort.by("createdDate").descending());
+        Page<BookTransactionHistory>  allBorrowedBooks = transactionHistoryRepository.findAllBorrowedBooks(pageable, user.getId());
+        List<BorrowedBookDto> bookDto = allBorrowedBooks.stream()
+                .map(borrowedBook -> bookMapper.toDto(borrowedBook))
+                .collect(Collectors.toList());
+        return new PageResponse<>(
+                bookDto,
+                allBorrowedBooks.getNumber(),
+                allBorrowedBooks.getSize(),
+                allBorrowedBooks.getTotalElements(),
+                allBorrowedBooks.getTotalPages(),
+                allBorrowedBooks.isFirst(),
+                allBorrowedBooks.isLast()
+        );
+
+
+    }
 
 
 }
