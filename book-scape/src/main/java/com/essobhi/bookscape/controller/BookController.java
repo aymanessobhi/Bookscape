@@ -104,7 +104,7 @@ public class BookController {
             @PathVariable("book-id") Integer bookId,
             Authentication connectedUser
     ){
-        return ResponseEntity.ok(bookService.returnBorrowBook(bookId, connectedUser));
+        return ResponseEntity.ok(bookService.approveReturnBorrowedBook(bookId, connectedUser));
     }
 
 

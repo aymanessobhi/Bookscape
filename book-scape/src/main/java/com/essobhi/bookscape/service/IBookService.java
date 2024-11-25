@@ -19,4 +19,5 @@ public interface IBookService {
     Integer updateArchivedStatus(int bookId, Authentication connectedUser);
     Integer borrowBook(int bookId, Authentication connectedUser);
     Integer returnBorrowBook(int bookId, Authentication connectedUser);
+    Integer approveReturnBorrowedBook(int bookId, Authentication connectedUser);
 }
