@@ -80,7 +80,7 @@ public class BookController {
             @PathVariable("book-id") Integer bookId,
             Authentication connectedUser
     ){
-        return ResponseEntity.ok(bookService.updateShareableStatus(bookId, connectedUser));
+        return ResponseEntity.ok(bookService.updateArchivedStatus(bookId, connectedUser));
     }
 
 

@@ -16,4 +16,5 @@ public interface IBookService {
     PageResponse<BorrowedBookDto> findAllBorrowedBooks(int page, int size, Authentication connectedUser);
     PageResponse<BorrowedBookDto> findAllReturnedBooks(int page, int size, Authentication connectedUser);
     Integer updateShareableStatus(int bookId, Authentication connectedUser);
+    Integer updateArchivedStatus(int bookId, Authentication connectedUser);
 }

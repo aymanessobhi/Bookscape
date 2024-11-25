@@ -140,5 +140,18 @@ public class BookServiceImpl implements IBookService {
         return bookId;
     }
 
+    @Override
+    public Integer updateArchivedStatus(int bookId, Authentication connectedUser) {
+        Book book = bookRepository.findById(bookId)
+                .orElseThrow(()-> new EntityNotFoundException("No book found  with the ID:: "+ bookId));
+        User user = ((User) connectedUser.getPrincipal());
+        if(!Objects.equals(book.getOwner().getBooks(), user.getId())){
+            throw new OperationNotPermittedException("You cannot update books archived status");
+        }
+        book.setShareable(!book.isArchived());
+        bookRepository.save(book);
+        return bookId;
+    }
+
 
 }
