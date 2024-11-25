@@ -6,12 +6,14 @@ import com.essobhi.bookscape.domain.User;
 import com.essobhi.bookscape.dto.BookDto;
 import com.essobhi.bookscape.dto.BorrowedBookDto;
 import com.essobhi.bookscape.dto.PageResponse;
+import com.essobhi.bookscape.exception.OperationNotPermittedException;
 import com.essobhi.bookscape.mapper.BookMapper;
 import com.essobhi.bookscape.repository.BookRepository;
 import com.essobhi.bookscape.repository.TransactionHistoryRepository;
 import com.essobhi.bookscape.service.IBookService;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
+import org.modelmapper.internal.bytebuddy.implementation.bytecode.Throw;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -20,6 +22,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -122,6 +125,19 @@ public class BookServiceImpl implements IBookService {
                 allBorrowedBooks.isFirst(),
                 allBorrowedBooks.isLast()
         );
+    }
+
+    @Override
+    public Integer updateShareableStatus(int bookId, Authentication connectedUser) {
+        Book book = bookRepository.findById(bookId)
+                .orElseThrow(()-> new EntityNotFoundException("No book found  with the ID:: "+ bookId));
+        User user = ((User) connectedUser.getPrincipal());
+        if(!Objects.equals(book.getOwner().getBooks(), user.getId())){
+            throw new OperationNotPermittedException("You cannot update books shareable status");
+        }
+        book.setShareable(!book.isShareable());
+        bookRepository.save(book);
+        return bookId;
     }
 
 
