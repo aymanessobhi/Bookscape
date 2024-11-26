@@ -5,11 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="257d9695-eaa4-4366-8991-d6e2040ee75f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/controller/FeedbackController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/dto/BorrowedBookDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/dto/FeedbackDto.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/dto/PageResponse.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/exception/OperationNotPermittedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/mapper/FeedbackMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/repository/FeedbackRepository.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/repository/TransactionHistoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/service/IFeedbackService.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/service/IFileStorageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/service/Impl/FeedbackServiceImpl.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/service/Impl/FileStorageServiceImpl.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/specification/BookSpecification.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/utils/FileUtils.java" afterDir="false" />
@@ -113,7 +119,7 @@
       <workItem from="1732211468676" duration="13516000" />
       <workItem from="1732548041367" duration="9105000" />
       <workItem from="1732579828446" duration="4600000" />
-      <workItem from="1732637525750" duration="271000" />
+      <workItem from="1732637525750" duration="2412000" />
     </task>
     <servers />
   </component>
