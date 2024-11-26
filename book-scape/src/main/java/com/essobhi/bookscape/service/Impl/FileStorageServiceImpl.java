@@ -4,6 +4,7 @@ import com.essobhi.bookscape.domain.Book;
 import com.essobhi.bookscape.service.IFileStorageService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.lang.NonNull;
+import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
@@ -16,6 +17,7 @@ import static java.io.File.separator;
 import static java.lang.System.currentTimeMillis;
 import static org.hibernate.query.sqm.tree.SqmNode.log;
 
+@Service
 public class FileStorageServiceImpl implements IFileStorageService {
     @Value("${application.file.upload.photos-output-path}")
     private String fileUploadPath;

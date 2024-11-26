@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:bookscape-ui": "node dist/bookscape-ui/server/server.mjs"
+    "serve:ssr:bookscape-ui": "node dist/bookscape-ui/server/server.mjs",
+    "api-gen": "ng-openapi-gen --input ./src/openapi/openapi.json --output ./src/app/services"
   },
   "private": true,
   "dependencies": {
@@ -28,6 +29,7 @@
     "@tailwindcss/typography": "^0.5.15",
     "daisyui": "^4.12.14",
     "express": "^4.18.2",
+    "ng-openapi-gen": "^0.52.0",
     "rxjs": "~7.8.0",
     "tailwindcss-typography": "^3.1.0",
     "tslib": "^2.3.0",

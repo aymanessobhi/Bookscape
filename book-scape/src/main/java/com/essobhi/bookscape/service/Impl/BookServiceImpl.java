@@ -34,7 +34,7 @@ public class BookServiceImpl implements IBookService {
     private final TransactionHistoryRepository transactionHistoryRepository;
     private final BookRepository bookRepository;
     private final BookMapper bookMapper;
-    private final IFileStorageService fileStorageService;
+    private final FileStorageServiceImpl fileStorageService;
     @Override
     public BookDto save(BookDto dto, Authentication connectedUser) {
         User user = ((User) connectedUser.getPrincipal());
