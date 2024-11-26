@@ -22,7 +22,7 @@ public class FeedbackMapper {
                 .build();
     }
 
-    public FeedbackDto toFeedBackDto(Feedback feedBack, Integer id){
+    public FeedbackDto toFeedbackDto(Feedback feedBack, Integer id){
         return FeedbackDto.builder()
                 .note(feedBack.getNote())
                 .comment(feedBack.getComment())
