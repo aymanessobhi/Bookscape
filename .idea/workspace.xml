@@ -19,7 +19,6 @@
       <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/service/Impl/FileStorageServiceImpl.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/specification/BookSpecification.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/utils/FileUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book-scape/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/BookScapeApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/BookScapeApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/domain/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/domain/Book.java" afterDir="false" />
@@ -119,7 +118,7 @@
       <workItem from="1732211468676" duration="13516000" />
       <workItem from="1732548041367" duration="9105000" />
       <workItem from="1732579828446" duration="4600000" />
-      <workItem from="1732637525750" duration="3959000" />
+      <workItem from="1732637525750" duration="4643000" />
     </task>
     <servers />
   </component>
