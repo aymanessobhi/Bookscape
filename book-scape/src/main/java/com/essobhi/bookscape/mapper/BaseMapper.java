@@ -5,32 +5,39 @@ import com.essobhi.bookscape.dto.BaseDto;
 import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
 
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@AllArgsConstructor
-public class BaseMapper <E extends BaseEntity<E>, D extends BaseDto<D>> {
-    private final ModelMapper modelMapper;
-    private final Class<E> entityClass;
-    private final Class<D> dtoClass;
+public abstract class BaseMapper<E extends BaseEntity<E>, D extends BaseDto<D>> {
+    private final ModelMapper mapper = new ModelMapper();
 
-    public D toDto(E entity) {
-        if (entity == null) return null;
-        return modelMapper.map(entity, dtoClass);
+    public BaseMapper() {
+    }
+
+    private Type parametrizeType(int index) {
+        Type superClass = this.getClass().getGenericSuperclass();
+        return ((ParameterizedType) superClass).getActualTypeArguments()[index];
     }
 
     public E toEntity(D dto) {
-        if (dto == null) return null;
-        return modelMapper.map(dto, entityClass);
+        return (E) this.mapper.map(dto, this.parametrizeType(0));
     }
 
-    public List<D> toDtoList(List<E> entities) {
-        if (entities == null) return null;
-        return entities.stream().map(this::toDto).collect(Collectors.toList());
+    public D toDto(E entity) {
+        return (D) this.mapper.map(entity, this.parametrizeType(1));
     }
 
-    public List<E> toEntityList(List<D> dtos) {
-        if (dtos == null) return null;
-        return dtos.stream().map(this::toEntity).collect(Collectors.toList());
+    public List<D> toDtos(List<E> entities) {
+        return entities.stream()
+                .map(this::toDto)
+                .collect(Collectors.toList());
+    }
+
+    public List<E> toEntities(List<D> dtos) {
+        return dtos.stream()
+                .map(this::toEntity)
+                .collect(Collectors.toList());
     }
 }

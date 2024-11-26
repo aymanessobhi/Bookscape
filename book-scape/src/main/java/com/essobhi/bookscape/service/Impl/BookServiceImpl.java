@@ -11,19 +11,19 @@ import com.essobhi.bookscape.mapper.BookMapper;
 import com.essobhi.bookscape.repository.BookRepository;
 import com.essobhi.bookscape.repository.TransactionHistoryRepository;
 import com.essobhi.bookscape.service.IBookService;
+import com.essobhi.bookscape.service.IFileStorageService;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
-import org.modelmapper.internal.bytebuddy.implementation.bytecode.Throw;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 import static com.essobhi.bookscape.specification.BookSpecification.withOwnerId;
@@ -34,18 +34,19 @@ public class BookServiceImpl implements IBookService {
     private final TransactionHistoryRepository transactionHistoryRepository;
     private final BookRepository bookRepository;
     private final BookMapper bookMapper;
+    private final IFileStorageService fileStorageService;
     @Override
     public BookDto save(BookDto dto, Authentication connectedUser) {
         User user = ((User) connectedUser.getPrincipal());
-        Book book = bookMapper.toEntity(dto);
+        Book book = bookMapper.toBook(dto);
         book.setOwner(user);
         Book savedBook =  bookRepository.save(book);
-        return bookMapper.toDto(savedBook);
+        return bookMapper.toBookDto(savedBook);
     }
 
     @Override
     public BookDto findById(Integer bookId) {
-        return bookMapper.toDto(bookRepository.findById(bookId)
+        return bookMapper.toBookDto(bookRepository.findById(bookId)
                 .orElseThrow(()-> new EntityNotFoundException("No book found  with the ID ::"+bookId)));
     }
 
@@ -55,7 +56,7 @@ public class BookServiceImpl implements IBookService {
         Pageable pageable = PageRequest.of(page, size, Sort.by("createdDate").descending());
         Page<Book> books = bookRepository.findAllDisplayableBooks(pageable, user.getId());
         List<BookDto> bookDto = books.stream()
-                .map(book -> bookMapper.toDto(book))
+                .map(book -> bookMapper.toBookDto(book))
                 .collect(Collectors.toList());
         return new PageResponse<>(
                 bookDto,
@@ -74,7 +75,7 @@ public class BookServiceImpl implements IBookService {
         Pageable pageable = PageRequest.of(page, size, Sort.by("createdDate").descending());
         Page<Book> books = bookRepository.findAll(withOwnerId(connectedUser.getName()), pageable);
         List<BookDto> bookDto = books.stream()
-                .map(book -> bookMapper.toDto(book))
+                .map(book -> bookMapper.toBookDto(book))
                 .collect(Collectors.toList());
         return new PageResponse<>(
                 bookDto,
@@ -93,7 +94,7 @@ public class BookServiceImpl implements IBookService {
         Pageable pageable = PageRequest.of(page, size, Sort.by("createdDate").descending());
         Page<BookTransactionHistory>  allBorrowedBooks = transactionHistoryRepository.findAllBorrowedBooks(pageable, user.getId());
         List<BorrowedBookDto> bookDto = allBorrowedBooks.stream()
-                .map(borrowedBook -> bookMapper.toDto(borrowedBook))
+                .map(borrowedBook -> bookMapper.toBorrowedBookResponse(borrowedBook))
                 .collect(Collectors.toList());
         return new PageResponse<>(
                 bookDto,
@@ -114,7 +115,7 @@ public class BookServiceImpl implements IBookService {
         Pageable pageable = PageRequest.of(page, size, Sort.by("createdDate").descending());
         Page<BookTransactionHistory>  allBorrowedBooks = transactionHistoryRepository.findAllReturnedBooks(pageable, user.getId());
         List<BorrowedBookDto> bookDto = allBorrowedBooks.stream()
-                .map(borrowedBook -> bookMapper.toDto(borrowedBook))
+                .map(borrowedBook -> bookMapper.toBorrowedBookResponse(borrowedBook))
                 .collect(Collectors.toList());
         return new PageResponse<>(
                 bookDto,
@@ -212,6 +213,18 @@ public class BookServiceImpl implements IBookService {
                 .orElseThrow(() -> new OperationNotPermittedException("The book is not returned yet. You cannot approved"));
         bookTransactionHistory.setReturnApproved(true);
         return transactionHistoryRepository.save(bookTransactionHistory).getId();
+    }
+
+    @Override
+    public void uploadBookCoverPicture(MultipartFile file, Authentication connectedUser, Integer bookId) {
+        Book book = bookRepository.findById(bookId)
+                .orElseThrow(() -> new EntityNotFoundException("No book found with the ID:: "+bookId));
+        User  user = ((User) connectedUser.getPrincipal());
+
+        var bookCover = fileStorageService.saveFile(file, user.getId());
+        book.setBookCover(bookCover);
+        bookRepository.save(book);
+
     }
 
 
