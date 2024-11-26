@@ -4,6 +4,7 @@ import com.essobhi.bookscape.domain.Book;
 import com.essobhi.bookscape.domain.BookTransactionHistory;
 import com.essobhi.bookscape.dto.BookDto;
 import com.essobhi.bookscape.dto.BorrowedBookDto;
+import com.essobhi.bookscape.utils.FileUtils;
 import org.springframework.stereotype.Service;
 
 @Service
