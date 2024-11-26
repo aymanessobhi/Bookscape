@@ -13,12 +13,15 @@
       <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/mapper/FeedbackMapper.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/repository/FeedbackRepository.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/repository/TransactionHistoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/security/OpenApiConfig.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/service/IFeedbackService.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/service/IFileStorageService.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/service/Impl/FeedbackServiceImpl.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/service/Impl/FileStorageServiceImpl.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/specification/BookSpecification.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/utils/FileUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookscape-ui/src/app/common/font-awesome-icons.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book-scape/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/BookScapeApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/BookScapeApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/domain/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/domain/Book.java" afterDir="false" />
@@ -27,6 +30,7 @@
       <change beforePath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/exception/GlobalException.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/exception/GlobalException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/security/BeanConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/security/BeanConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/security/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book-scape/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/resources/application-dev.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +49,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/book-scape" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -57,38 +61,42 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="2oeyBRlkucJJsBUg6GOHZcgfMHS" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;20&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;888ed9f778f030454e2a0f15d6b9fc1b&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "20",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "spring.configuration.checksum": "888ed9f778f030454e2a0f15d6b9fc1b",
+    "ts.external.directory.path": "C:\\Users\\AYMAN ES-SOBHI\\Desktop\\BookScape\\BookScape\\bookscape-ui\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="BookScapeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="book-scape" />
@@ -118,7 +126,7 @@
       <workItem from="1732211468676" duration="13516000" />
       <workItem from="1732548041367" duration="9105000" />
       <workItem from="1732579828446" duration="4600000" />
-      <workItem from="1732637525750" duration="4643000" />
+      <workItem from="1732637525750" duration="12976000" />
     </task>
     <servers />
   </component>
