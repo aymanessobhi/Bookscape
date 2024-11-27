@@ -2,11 +2,12 @@ import { Component, inject, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FaConfig, FaIconComponent, FaIconLibrary } from '@fortawesome/angular-fontawesome'; // FaIconComponent is essential for icons
 import { fontAwesomeIcons } from './common/font-awesome-icons';
+import {NgClass} from "@angular/common";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FaIconComponent], // Include FaIconComponent here
+  imports: [RouterOutlet, FaIconComponent,NgClass],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
