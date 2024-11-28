@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 import { NgxControlError } from 'ngxtension/control-error';
 import { AuthService } from '../../services/services/auth.service';
 import { AuthRequest } from '../../services/models/auth-request';
+import {TokenService} from "../../services/token/token.service";
 
 @Component({
   selector: 'app-login',
@@ -22,6 +23,7 @@ export class LoginComponent {
   formBuilder = inject(FormBuilder);
   router = inject(Router);
   authService = inject(AuthService);
+  tokenService = inject(TokenService);
   errorMsg: Array<string> = [];
 
   authRequest: AuthRequest = {email: '', password: ''};
@@ -32,8 +34,8 @@ export class LoginComponent {
         body: this.authRequest
       }).subscribe(
       {
-        next:() =>{
-          //todo save the token
+        next:(res) =>{
+          this.tokenService.token = res.token as string;
           this.router.navigate(['books'])
         },
         error:(err) =>{
@@ -45,7 +47,6 @@ export class LoginComponent {
           }
         }
       })
-    console.log(this.errorMsg.length)
   }
 
 
