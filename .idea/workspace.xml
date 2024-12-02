@@ -20,8 +20,9 @@
       <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/service/Impl/FileStorageServiceImpl.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/specification/BookSpecification.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/utils/FileUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookscape-ui/src/openapi/openapi.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookScape.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BookScape.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book-scape/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/BookScapeApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/BookScapeApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/domain/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/domain/Book.java" afterDir="false" />
@@ -30,11 +31,14 @@
       <change beforePath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/exception/GlobalException.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/exception/GlobalException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/security/BeanConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/security/BeanConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/security/JwtFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/security/JwtFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/security/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book-scape/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/resources/application-dev.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book-scape/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookscape-ui/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/bookscape-ui/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookscape-ui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/bookscape-ui/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/book-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/book-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/components/menu/menu.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/components/menu/menu.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/components/menu/menu.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/components/menu/menu.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +70,7 @@
     </option>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2oeyBRlkucJJsBUg6GOHZcgfMHS" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -104,7 +108,13 @@
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
-  <component name="RunManager" selected="npm.api-gen">
+  <component name="RunManager" selected="Docker.docker-compose.yml.phpmyadmin: Compose Deployment">
+    <configuration name="generated-requests | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="3" requestIdentifier="#3" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular Application (bookscape-ui)" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
     <configuration name="BookScapeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="book-scape" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.essobhi.bookscape.BookScapeApplication" />
@@ -144,6 +154,33 @@
       <option name="specificationPath" value="C:\Users\AYMAN ES-SOBHI\Desktop\BookScape\BookScape\bookscape-ui\src\openapi\openapi.json" />
       <method v="2" />
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml" />
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.phpmyadmin: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="phpmyadmin" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular CLI Server (bookscape-ui)" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/bookscape-ui/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="api-gen" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/bookscape-ui/package.json" />
       <command value="run" />
@@ -156,6 +193,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.docker-compose.yml.phpmyadmin: Compose Deployment" />
+        <item itemvalue="HTTP Request.generated-requests | #3" />
         <item itemvalue="npm.api-gen" />
       </list>
     </recent_temporary>
@@ -181,6 +220,11 @@
       <workItem from="1732548041367" duration="9105000" />
       <workItem from="1732579828446" duration="4600000" />
       <workItem from="1732637525750" duration="12976000" />
+      <workItem from="1732725968649" duration="8017000" />
+      <workItem from="1732745437143" duration="10005000" />
+      <workItem from="1732798974512" duration="3213000" />
+      <workItem from="1732831658140" duration="3117000" />
+      <workItem from="1733089491813" duration="6220000" />
     </task>
     <servers />
   </component>

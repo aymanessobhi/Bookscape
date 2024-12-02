@@ -24,9 +24,10 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 import java.util.Objects;
-import java.util.stream.Collectors;
+
 
 import static com.essobhi.bookscape.specification.BookSpecification.withOwnerId;
+import static java.util.stream.Collectors.toList;
 
 @Service
 @RequiredArgsConstructor
@@ -56,8 +57,11 @@ public class BookServiceImpl implements IBookService {
         Pageable pageable = PageRequest.of(page, size, Sort.by("createdDate").descending());
         Page<Book> books = bookRepository.findAllDisplayableBooks(pageable, user.getId());
         List<BookDto> bookDto = books.stream()
-                .map(book -> bookMapper.toBookDto(book))
-                .collect(Collectors.toList());
+                .map(bookMapper::toBookDto)
+                .toList();
+
+        System.out.println("Books retrieved from repository: ");
+        books.forEach(book -> System.out.println(book.toString()));
         return new PageResponse<>(
                 bookDto,
                 books.getNumber(),
@@ -76,7 +80,7 @@ public class BookServiceImpl implements IBookService {
         Page<Book> books = bookRepository.findAll(withOwnerId(connectedUser.getName()), pageable);
         List<BookDto> bookDto = books.stream()
                 .map(book -> bookMapper.toBookDto(book))
-                .collect(Collectors.toList());
+                .collect(toList());
         return new PageResponse<>(
                 bookDto,
                 books.getNumber(),
@@ -95,7 +99,7 @@ public class BookServiceImpl implements IBookService {
         Page<BookTransactionHistory>  allBorrowedBooks = transactionHistoryRepository.findAllBorrowedBooks(pageable, user.getId());
         List<BorrowedBookDto> bookDto = allBorrowedBooks.stream()
                 .map(borrowedBook -> bookMapper.toBorrowedBookResponse(borrowedBook))
-                .collect(Collectors.toList());
+                .collect(toList());
         return new PageResponse<>(
                 bookDto,
                 allBorrowedBooks.getNumber(),
@@ -116,7 +120,7 @@ public class BookServiceImpl implements IBookService {
         Page<BookTransactionHistory>  allBorrowedBooks = transactionHistoryRepository.findAllReturnedBooks(pageable, user.getId());
         List<BorrowedBookDto> bookDto = allBorrowedBooks.stream()
                 .map(borrowedBook -> bookMapper.toBorrowedBookResponse(borrowedBook))
-                .collect(Collectors.toList());
+                .collect(toList());
         return new PageResponse<>(
                 bookDto,
                 allBorrowedBooks.getNumber(),
