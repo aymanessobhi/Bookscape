@@ -59,9 +59,6 @@ public class BookServiceImpl implements IBookService {
         List<BookDto> bookDto = books.stream()
                 .map(bookMapper::toBookDto)
                 .toList();
-
-        System.out.println("Books retrieved from repository: ");
-        books.forEach(book -> System.out.println(book.toString()));
         return new PageResponse<>(
                 bookDto,
                 books.getNumber(),
