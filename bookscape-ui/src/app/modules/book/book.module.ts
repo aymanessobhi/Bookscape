@@ -4,8 +4,11 @@ import { CommonModule } from '@angular/common';
 import { BookRoutingModule } from './book-routing.module';
 
 
+
 @NgModule({
-  declarations: [],
+  declarations: [
+
+  ],
   imports: [
     CommonModule,
     BookRoutingModule
