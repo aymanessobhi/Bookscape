@@ -5,11 +5,12 @@ import {CommonModule} from "@angular/common";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {NgxControlError} from "ngxtension/control-error";
 import {PageResponseBookDto} from "../../../../services/models/page-response-book-dto";
+import {BookCardComponent} from "../../components/book-card/book-card.component";
 
 @Component({
   selector: 'app-book-list',
   standalone: true,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, NgxControlError],
+    imports: [CommonModule, FormsModule, ReactiveFormsModule, NgxControlError, BookCardComponent],
   templateUrl: './book-list.component.html',
   styleUrl: './book-list.component.scss'
 })

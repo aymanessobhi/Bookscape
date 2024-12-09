@@ -31,8 +31,16 @@
       <change beforePath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/security/BeanConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/security/BeanConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/security/JwtFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/security/JwtFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/service/Impl/AuthenticationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/service/Impl/AuthenticationServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book-scape/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/resources/application-dev.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book-scape/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookscape-ui/src/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookscape-ui/src/app/app.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/components/book-card/book-card.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/components/book-card/book-card.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/components/book-card/book-card.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/components/book-card/book-card.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/components/menu/menu.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/components/menu/menu.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/pages/book-list/book-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/pages/book-list/book-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/pages/book-list/book-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/pages/book-list/book-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookscape-ui/src/app/services/interceptor/http-token.interceptor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookscape-ui/src/app/services/interceptor/http-token.interceptor.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +58,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/book-scape" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -102,7 +110,7 @@
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
-  <component name="RunManager" selected="npm.Angular CLI Server (bookscape-ui)">
+  <component name="RunManager" selected="Spring Boot.BookScapeApplication">
     <configuration name="generated-requests | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="3" requestIdentifier="#3" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -222,6 +230,10 @@
       <workItem from="1732831658140" duration="3117000" />
       <workItem from="1733089491813" duration="6220000" />
       <workItem from="1733177457418" duration="9276000" />
+      <workItem from="1733260853581" duration="5246000" />
+      <workItem from="1733321331012" duration="7611000" />
+      <workItem from="1733767553890" duration="2532000" />
+      <workItem from="1733782157357" duration="609000" />
     </task>
     <servers />
   </component>
