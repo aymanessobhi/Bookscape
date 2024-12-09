@@ -1,5 +1,7 @@
 import {Component, OnInit,inject} from '@angular/core';
 import {CommonModule, DOCUMENT} from "@angular/common";
+import {routes} from "../../../../app.routes";
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -11,10 +13,11 @@ import {CommonModule, DOCUMENT} from "@angular/common";
 })
 export class MenuComponent implements OnInit{
 
-  document = inject(DOCUMENT)
+  router = inject(Router)
   logout() {
     localStorage.removeItem('token');
-    window.location.reload();
+    this.router.navigate(['login']);
+
   }
 
   ngOnInit(): void {
