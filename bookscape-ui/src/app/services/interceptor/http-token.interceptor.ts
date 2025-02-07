@@ -1,15 +1,15 @@
 import {HttpHeaders, HttpInterceptorFn} from '@angular/common/http';
 import {TokenService} from "../token/token.service";
-import {inject} from "@angular/core";
+import { inject, PLATFORM_ID } from '@angular/core';
+import {isPlatformBrowser} from "@angular/common";
 
 
 export const httpTokenInterceptor: HttpInterceptorFn = (req, next) => {
   let tokenService = inject(TokenService);
 
-  const token  = tokenService.token;
+  const platformId = inject(PLATFORM_ID);
 
-  console.log('Token:', token);
-  console.log(req.headers.get('Authorization'));
+  const token = isPlatformBrowser(platformId) ? tokenService.token : null;
 
   if(token){
     const authReq =req.clone({

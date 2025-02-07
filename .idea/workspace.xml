@@ -34,13 +34,17 @@
       <change beforePath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/service/Impl/AuthenticationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/service/Impl/AuthenticationServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book-scape/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/resources/application-dev.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book-scape/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookscape-ui/src/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookscape-ui/src/app/app.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookscape-ui/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/bookscape-ui/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookscape-ui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/bookscape-ui/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookscape-ui/src/app/common/font-awesome-icons.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookscape-ui/src/app/common/font-awesome-icons.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/components/book-card/book-card.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/components/book-card/book-card.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/components/book-card/book-card.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/components/book-card/book-card.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/components/book-card/book-card.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/components/book-card/book-card.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/components/menu/menu.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/components/menu/menu.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/components/rating/rating.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/components/rating/rating.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/components/rating/rating.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/components/rating/rating.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/pages/book-list/book-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/pages/book-list/book-list.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/pages/book-list/book-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/pages/book-list/book-list.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bookscape-ui/src/app/services/interceptor/http-token.interceptor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookscape-ui/src/app/services/interceptor/http-token.interceptor.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookscape-ui/src/app/services/token/token.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookscape-ui/src/app/services/token/token.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +62,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/book-scape" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -92,6 +96,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;20&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/AYMAN ES-SOBHI/Desktop/trading_platform&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -233,7 +238,10 @@
       <workItem from="1733260853581" duration="5246000" />
       <workItem from="1733321331012" duration="7611000" />
       <workItem from="1733767553890" duration="2532000" />
-      <workItem from="1733782157357" duration="609000" />
+      <workItem from="1733782157357" duration="5418000" />
+      <workItem from="1734708793016" duration="66000" />
+      <workItem from="1738941085109" duration="14309000" />
+      <workItem from="1738959686511" duration="697000" />
     </task>
     <servers />
   </component>
