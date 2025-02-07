@@ -15,27 +15,32 @@
       <ul class="menu menu-horizontal p-0">
         <li>
           <a routerLink="/books">
-            <i class="fas fa-home-alt"></i>&nbsp;Home
+            <fa-icon [icon]="['fas', 'home']"></fa-icon>
+            &nbsp;Home
           </a>
         </li>
         <li>
-          <a routerLink="my-books">
-            <i class="fas fa-book"></i>&nbsp;My books
+          <a [routerLink]="['my-books']">
+            <fa-icon [icon]="['fas', 'book']"></fa-icon>
+            &nbsp;My books
           </a>
         </li>
         <li>
-          <a routerLink="my-waiting-list">
-            <i class="fas fa-heart"></i>&nbsp;My waiting list
+          <a [routerLink]="['my-waiting-list']">
+            <fa-icon [icon]="['fas', 'heart']"></fa-icon>
+            &nbsp;My waiting list
           </a>
         </li>
         <li>
-          <a routerLink="my-returned-books">
-            <i class="fa-solid fa-truck-fast"></i>&nbsp;My returned books
+          <a [routerLink]="['my-returned-books']">
+            <fa-icon [icon]="['fas', 'truck-fast']"></fa-icon>
+            &nbsp;My returned books
           </a>
         </li>
         <li>
-          <a routerLink="my-borrowed-books">
-            <i class="fas fa-list-check"></i>&nbsp;Borrowed books
+          <a [routerLink]="['my-borrowed-books']">
+            <fa-icon [icon]="['fas', 'list-check']"></fa-icon>
+            &nbsp;Borrowed books
           </a>
         </li>
       </ul>
