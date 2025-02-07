@@ -1,5 +1,5 @@
 <div
-  class="card w-80 h-[450px] border bg-base-100 shadow-xl overflow-hidden"
+  class="card w-80 h-[450px] border bg-base-100 shadow-xl overflow-hidden mt-12"
   [ngClass]="{
     'border-success': book.shareable,
     'border-warning': book.archived
@@ -31,9 +31,6 @@
   <div class="card-actions justify-between p-4">
     <div class="d-flex gap-2">
       <app-rating [rating]="book.rate || 0"></app-rating>
-      <span class="fw-bold" *ngIf="book.rate || 0 > 0">
-        {{book.rate}}
-      </span>
     </div>
     <div class="flex gap-2" *ngIf="!manage">
       <fa-icon

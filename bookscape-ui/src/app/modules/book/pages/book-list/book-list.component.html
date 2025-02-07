@@ -1,6 +1,73 @@
 <h1>Books List</h1>
-
-<div class="d-flex justify-content-start gap-2 flex-wrap">
-  <app-book-card [book]="book" *ngFor="let book of bookResponse.content">{{ book.title }}</app-book-card>
+<div
+  *ngIf="message"
+  class="alert "
+  [class.alert-danger]="level==='error'"
+  [class.alert-success]="level==='success'"
+  role="alert"
+>
+  <p>{{message}}</p>
 </div>
+<hr>
+
+<div class="flex flex-wrap gap-2">
+  <app-book-card
+    [book]="book"
+    *ngFor="let book of bookResponse.content">
+    {{ book.title }}
+  </app-book-card>
+</div>
+
+<div class="flex justify-center mt-3">
+  <nav aria-label="Pagination">
+    <ul class="join">
+      <li>
+        <button
+          (click)="goToFirstPage()"
+          class="btn btn-sm join-item"
+          [disabled]="page === 0"
+        >
+          <fa-icon [icon]="['fas', 'angles-left']"></fa-icon>
+        </button>
+      </li>
+      <li>
+        <button
+          (click)="goToPreviousPage()"
+          class="btn btn-sm join-item"
+          [disabled]="page === 0"
+        >
+          <fa-icon [icon]="['fas', 'angle-left']"></fa-icon>
+        </button>
+      </li>
+      <li *ngFor="let pageIndex of pages">
+        <button
+          (click)="gotToPage(pageIndex)"
+          class="btn btn-sm join-item"
+          [class.btn-active]="page === pageIndex"
+        >
+          {{ pageIndex + 1 }}
+        </button>
+      </li>
+      <li>
+        <button
+          (click)="goToNextPage()"
+          class="btn btn-sm join-item"
+          [disabled]="isLastPage"
+        >
+          <fa-icon [icon]="['fas', 'chevron-right']"></fa-icon>
+        </button>
+      </li>
+      <li>
+        <button
+          (click)="goToLastPage()"
+          class="btn btn-sm join-item"
+          [disabled]="isLastPage"
+        >
+          <fa-icon [icon]="['fas', 'angles-right']"></fa-icon>
+        </button>
+      </li>
+    </ul>
+  </nav>
+</div>
+
 

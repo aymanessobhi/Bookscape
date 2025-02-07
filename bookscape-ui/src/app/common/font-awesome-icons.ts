@@ -14,7 +14,7 @@ import {
   faHeart,
   faEdit,
   faShareNodes,
-  faArchive, faStar, faStarHalf,
+  faArchive, faStar, faStarHalf, faAnglesLeft, faAnglesRight, faAngleLeft, faAngleRight, faChevronLeft, faChevronRight,
 } from '@fortawesome/free-solid-svg-icons'; // Solid icons
 import {
   faFacebook,
@@ -45,4 +45,9 @@ export const fontAwesomeIcons: IconDefinition[] = [
   faBook,
   faStar,
   faStarHalf,
+  faAnglesLeft,
+  faAnglesRight,
+  faAngleLeft,
+  faAngleRight,
+  faChevronRight
 ];
