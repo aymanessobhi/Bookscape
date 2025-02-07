@@ -8,6 +8,7 @@ import {PageResponseBookDto} from "../../../../services/models/page-response-boo
 import {BookCardComponent} from "../../components/book-card/book-card.component";
 import {fontAwesomeIcons} from "../../../../common/font-awesome-icons";
 import {FaConfig, FaIconComponent, FaIconLibrary} from "@fortawesome/angular-fontawesome";
+import {BookDto} from "../../../../services/models/book-dto";
 
 @Component({
   selector: 'app-book-list',
@@ -79,5 +80,27 @@ export class BookListComponent implements OnInit{
 
   get isLastPage() {
     return this.page === this.bookResponse.totalPages as number - 1;
+  }
+
+  borrowBook(book: BookDto) {
+      this.message = '';
+      this.level = 'success';
+      this.bookService.borrowBook({
+        'book-id': book.id as number
+      }).subscribe({
+        next: () => {
+          this.level = 'success';
+          this.message = 'Book successfully added to your list';
+        },
+        error: (err) => {
+          console.log(err);
+          this.level = 'error';
+          this.message = err.error.error;
+        }
+      });
+  }
+
+  displayBookDetails($event: BookDto) {
+
   }
 }
