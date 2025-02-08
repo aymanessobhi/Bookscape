@@ -1,23 +1,23 @@
 import {Component, inject, OnInit} from '@angular/core';
+import {PageResponseBookDto} from "../../../../services/models/page-response-book-dto";
+import {FaConfig, FaIconComponent, FaIconLibrary} from "@fortawesome/angular-fontawesome";
 import {BookService} from "../../../../services/services/book.service";
-import {Router} from "@angular/router";
+import {Router, RouterModule} from "@angular/router";
+import {fontAwesomeIcons} from "../../../../common/font-awesome-icons";
+import {BookDto} from "../../../../services/models/book-dto";
 import {CommonModule} from "@angular/common";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {NgxControlError} from "ngxtension/control-error";
-import {PageResponseBookDto} from "../../../../services/models/page-response-book-dto";
 import {BookCardComponent} from "../../components/book-card/book-card.component";
-import {fontAwesomeIcons} from "../../../../common/font-awesome-icons";
-import {FaConfig, FaIconComponent, FaIconLibrary} from "@fortawesome/angular-fontawesome";
-import {BookDto} from "../../../../services/models/book-dto";
 
 @Component({
-  selector: 'app-book-list',
+  selector: 'app-my-books',
   standalone: true,
-    imports: [CommonModule, FormsModule, ReactiveFormsModule, NgxControlError, BookCardComponent, FaIconComponent],
-  templateUrl: './book-list.component.html',
-  styleUrl: './book-list.component.scss'
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, NgxControlError, BookCardComponent, FaIconComponent,RouterModule],
+  templateUrl: './my-books.component.html',
+  styleUrl: './my-books.component.scss'
 })
-export class BookListComponent implements OnInit{
+export class MyBooksComponent implements OnInit{
   bookResponse: PageResponseBookDto = {};
   private faIconLibrary = inject(FaIconLibrary);
   private faConfig = inject(FaConfig);
@@ -39,17 +39,17 @@ export class BookListComponent implements OnInit{
   }
 
   private findAllBooks() {
-    this.bookService.findAllBooks(
+    this.bookService.findAllBooksByOwner(
       {
-          page: this.page,
-          size: this.size
+        page: this.page,
+        size: this.size
       }).subscribe({
-          next:(books)=>{
-            this.bookResponse = books;
-            this.pages = Array(this.bookResponse.totalPages)
-              .fill(0)
-              .map((x, i) => i);
-          }
+      next:(books)=>{
+        this.bookResponse = books;
+        this.pages = Array(this.bookResponse.totalPages)
+          .fill(0)
+          .map((x, i) => i);
+      }
     })
   }
 
@@ -82,25 +82,27 @@ export class BookListComponent implements OnInit{
     return this.page === this.bookResponse.totalPages as number - 1;
   }
 
-  borrowBook(book: BookDto) {
-      this.message = '';
-      this.level = 'success';
-      this.bookService.borrowBook({
-        'book-id': book.id as number
-      }).subscribe({
-        next: () => {
-          this.level = 'success';
-          this.message = 'Book successfully added to your list';
-        },
-        error: (err) => {
-          console.log(err);
-          this.level = 'error';
-          this.message = err.error.error;
-        }
-      });
+  archiveBook(book: BookDto) {
+    this.bookService.updateArchivedStatus({
+      'book-id': book.id as number
+    }).subscribe({
+      next: () => {
+        book.archived = !book.archived;
+      }
+    });
   }
 
-  displayBookDetails($event: BookDto) {
+  shareBook(book: BookDto) {
+    this.bookService.updateShareableStatus({
+      'book-id': book.id as number
+    }).subscribe({
+      next: () => {
+        book.shareable = !book.shareable;
+      }
+    });
+  }
 
+  editBook(book: BookDto) {
+    this.router.navigate(['books', 'manage', book.id]);
   }
 }

@@ -74,7 +74,7 @@ public class BookServiceImpl implements IBookService {
     public PageResponse<BookDto> findAllBooksByOwner(int page, int size, Authentication connectedUser) {
         User user = ((User) connectedUser.getPrincipal());
         Pageable pageable = PageRequest.of(page, size, Sort.by("createdDate").descending());
-        Page<Book> books = bookRepository.findAll(withOwnerId(connectedUser.getName()), pageable);
+        Page<Book> books = bookRepository.findAll(withOwnerId(user.getId()), pageable);
         List<BookDto> bookDto = books.stream()
                 .map(book -> bookMapper.toBookDto(book))
                 .collect(toList());
@@ -134,7 +134,7 @@ public class BookServiceImpl implements IBookService {
         Book book = bookRepository.findById(bookId)
                 .orElseThrow(()-> new EntityNotFoundException("No book found  with the ID:: "+ bookId));
         User user = ((User) connectedUser.getPrincipal());
-        if(!Objects.equals(book.getOwner().getBooks(), user.getId())){
+        if(!Objects.equals(book.getOwner().getId(), user.getId())){
             throw new OperationNotPermittedException("You cannot update books shareable status");
         }
         book.setShareable(!book.isShareable());
@@ -147,7 +147,7 @@ public class BookServiceImpl implements IBookService {
         Book book = bookRepository.findById(bookId)
                 .orElseThrow(()-> new EntityNotFoundException("No book found  with the ID:: "+ bookId));
         User user = ((User) connectedUser.getPrincipal());
-        if(!Objects.equals(book.getOwner().getBooks(), user.getId())){
+        if(!Objects.equals(book.getOwner().getId(), user.getId())){
             throw new OperationNotPermittedException("You cannot update books archived status");
         }
         book.setShareable(!book.isArchived());

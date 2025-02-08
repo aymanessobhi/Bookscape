@@ -1,27 +1,27 @@
-<div
-  *ngIf="message"
-  class="alert"
-  [ngClass]="{
-    'alert-error': level === 'error',
-    'alert-success': level === 'success',
-  }"
-  role="alert"
->
-  <p>{{ message }}</p>
-</div>
+<h1 class="text-3xl font-bold text my-4">
+  My Books List
+</h1>
 <hr>
+<div class="flex justify-end mt-1">
+  <button class="btn btn-outline btn-primary">
+  <a [routerLink]="['/books/manage']">
+    <fa-icon [icon]="['fas', 'plus']"></fa-icon>&nbsp;New book
+  </a>
+  </button>
+</div>
 
 <div class="flex flex-wrap gap-2">
   <app-book-card
     [book]="book"
-    (borrow)="borrowBook($event)"
-    (details)="displayBookDetails($event)"
-    *ngFor="let book of bookResponse.content">
-    {{ book.title }}
+    *ngFor="let book of bookResponse.content"
+    [manage]="true"
+    (archive)="archiveBook($event)"
+    (share)="shareBook($event)"
+    (edit)="editBook($event)">
   </app-book-card>
 </div>
 
-<div class="flex justify-center mt-3">
+<div class="flex justify-center mt-1">
   <nav aria-label="Pagination">
     <ul class="join">
       <li>
