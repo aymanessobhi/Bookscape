@@ -1,5 +1,7 @@
 package com.essobhi.bookscape.dto;
 
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
@@ -10,6 +12,8 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 public class BookDto extends BaseDto<BookDto>{
     private Integer id;
+    @NotNull(message = "100")
+    @NotEmpty(message = "100")
     private String title;
     private String authorName;
     private String isbn;

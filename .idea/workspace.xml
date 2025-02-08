@@ -34,11 +34,12 @@
       <change beforePath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/service/Impl/AuthenticationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/service/Impl/AuthenticationServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book-scape/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/resources/application-dev.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book-scape/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookscape-ui/src/app/common/font-awesome-icons.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookscape-ui/src/app/common/font-awesome-icons.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/book-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/book-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/components/book-card/book-card.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/components/book-card/book-card.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/components/menu/menu.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/components/menu/menu.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/components/menu/menu.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/components/menu/menu.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/pages/book-list/book-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/pages/book-list/book-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/pages/manage/manage.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/pages/manage/manage.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/pages/manage/manage.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/pages/manage/manage.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/pages/my-books/my-books.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/pages/my-books/my-books.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,6 +109,11 @@
 }</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\AYMAN ES-SOBHI\Desktop\BookScape\BookScape\bookscape-ui\src\app\modules\book\pages" />
+    </key>
   </component>
   <component name="RunManager" selected="Spring Boot.BookScapeApplication">
     <configuration name="generated-requests | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="3" requestIdentifier="#3" runType="Run single request">
@@ -235,7 +241,9 @@
       <workItem from="1733782157357" duration="5418000" />
       <workItem from="1734708793016" duration="66000" />
       <workItem from="1738941085109" duration="14309000" />
-      <workItem from="1738959686511" duration="10405000" />
+      <workItem from="1738959686511" duration="13016000" />
+      <workItem from="1739034478791" duration="7000" />
+      <workItem from="1739034936873" duration="9209000" />
     </task>
     <servers />
   </component>
