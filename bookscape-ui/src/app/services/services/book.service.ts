@@ -16,28 +16,22 @@ import { ApproveReturnBorrowBook$Params } from '../fn/book/approve-return-borrow
 import { BookDto } from '../models/book-dto';
 import { borrowBook } from '../fn/book/borrow-book';
 import { BorrowBook$Params } from '../fn/book/borrow-book';
-import { FeedbackDto } from '../models/feedback-dto';
 import { findAllBooks } from '../fn/book/find-all-books';
 import { FindAllBooks$Params } from '../fn/book/find-all-books';
 import { findAllBooksByOwner } from '../fn/book/find-all-books-by-owner';
 import { FindAllBooksByOwner$Params } from '../fn/book/find-all-books-by-owner';
 import { findAllBorrowedBooks } from '../fn/book/find-all-borrowed-books';
 import { FindAllBorrowedBooks$Params } from '../fn/book/find-all-borrowed-books';
-import { findAllFeedbacksByBook } from '../fn/book/find-all-feedbacks-by-book';
-import { FindAllFeedbacksByBook$Params } from '../fn/book/find-all-feedbacks-by-book';
 import { findAllReturnedBooks } from '../fn/book/find-all-returned-books';
 import { FindAllReturnedBooks$Params } from '../fn/book/find-all-returned-books';
 import { findBookById } from '../fn/book/find-book-by-id';
 import { FindBookById$Params } from '../fn/book/find-book-by-id';
 import { PageResponseBookDto } from '../models/page-response-book-dto';
 import { PageResponseBorrowedBookDto } from '../models/page-response-borrowed-book-dto';
-import { PageResponseFeedbackDto } from '../models/page-response-feedback-dto';
 import { returnBorrowBook } from '../fn/book/return-borrow-book';
 import { ReturnBorrowBook$Params } from '../fn/book/return-borrow-book';
 import { saveBook } from '../fn/book/save-book';
 import { SaveBook$Params } from '../fn/book/save-book';
-import { saveFeedback } from '../fn/book/save-feedback';
-import { SaveFeedback$Params } from '../fn/book/save-feedback';
 import { updateArchivedStatus } from '../fn/book/update-archived-status';
 import { UpdateArchivedStatus$Params } from '../fn/book/update-archived-status';
 import { updateShareableStatus } from '../fn/book/update-shareable-status';
@@ -49,31 +43,6 @@ import { UploadBookCoverPicture$Params } from '../fn/book/upload-book-cover-pict
 export class BookService extends BaseService {
   constructor(config: ApiConfiguration, http: HttpClient) {
     super(config, http);
-  }
-
-  /** Path part for operation `saveFeedback()` */
-  static readonly SaveFeedbackPath = '/feedbacks';
-
-  /**
-   * This method provides access to the full `HttpResponse`, allowing access to response headers.
-   * To access only the response body, use `saveFeedback()` instead.
-   *
-   * This method sends `application/json` and handles request body of type `application/json`.
-   */
-  saveFeedback$Response(params: SaveFeedback$Params, context?: HttpContext): Observable<StrictHttpResponse<FeedbackDto>> {
-    return saveFeedback(this.http, this.rootUrl, params, context);
-  }
-
-  /**
-   * This method provides access only to the response body.
-   * To access the full response (for headers, for example), `saveFeedback$Response()` instead.
-   *
-   * This method sends `application/json` and handles request body of type `application/json`.
-   */
-  saveFeedback(params: SaveFeedback$Params, context?: HttpContext): Observable<FeedbackDto> {
-    return this.saveFeedback$Response(params, context).pipe(
-      map((r: StrictHttpResponse<FeedbackDto>): FeedbackDto => r.body)
-    );
   }
 
   /** Path part for operation `findAllBooks()` */
@@ -277,31 +246,6 @@ export class BookService extends BaseService {
   updateArchivedStatus(params: UpdateArchivedStatus$Params, context?: HttpContext): Observable<number> {
     return this.updateArchivedStatus$Response(params, context).pipe(
       map((r: StrictHttpResponse<number>): number => r.body)
-    );
-  }
-
-  /** Path part for operation `findAllFeedbacksByBook()` */
-  static readonly FindAllFeedbacksByBookPath = '/feedbacks/book/{book-id}';
-
-  /**
-   * This method provides access to the full `HttpResponse`, allowing access to response headers.
-   * To access only the response body, use `findAllFeedbacksByBook()` instead.
-   *
-   * This method doesn't expect any request body.
-   */
-  findAllFeedbacksByBook$Response(params: FindAllFeedbacksByBook$Params, context?: HttpContext): Observable<StrictHttpResponse<PageResponseFeedbackDto>> {
-    return findAllFeedbacksByBook(this.http, this.rootUrl, params, context);
-  }
-
-  /**
-   * This method provides access only to the response body.
-   * To access the full response (for headers, for example), `findAllFeedbacksByBook$Response()` instead.
-   *
-   * This method doesn't expect any request body.
-   */
-  findAllFeedbacksByBook(params: FindAllFeedbacksByBook$Params, context?: HttpContext): Observable<PageResponseFeedbackDto> {
-    return this.findAllFeedbacksByBook$Response(params, context).pipe(
-      map((r: StrictHttpResponse<PageResponseFeedbackDto>): PageResponseFeedbackDto => r.body)
     );
   }
 

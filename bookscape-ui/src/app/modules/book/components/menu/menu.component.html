@@ -49,12 +49,12 @@
       <form class="form-control flex flex-row gap-2 items-center">
         <input class="input input-bordered w-40 lg:w-auto" type="search" placeholder="Find a book" aria-label="Search">
         <button class="btn btn-outline" type="submit">
-          <i class="fas fa-search"></i>
+          <fa-icon [icon]="['fas', 'search']"></fa-icon>
         </button>
         <span class="hidden lg:inline">Welcome</span>
         <span class="text-capitalize font-bold hidden lg:inline">AYMAN</span>
         <button class="btn btn-link text-error" type="button" (click)="logout()">
-          <i class="fas fa-door-open"></i>
+          <fa-icon [icon]="['fas', 'door-open']"></fa-icon>
         </button>
       </form>
     </div>

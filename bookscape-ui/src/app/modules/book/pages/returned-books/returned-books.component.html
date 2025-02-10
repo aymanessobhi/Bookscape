@@ -1,0 +1,78 @@
+<h2 class="text-2xl font-bold">My Returned Books</h2>
+<hr class="my-3">
+
+<!-- Alert Message -->
+<div *ngIf="message" class="alert shadow-lg" [ngClass]="{'alert-error': level==='error', 'alert-success': level==='success'}">
+  <p>{{ message }}</p>
+</div>
+
+<div class="card bg-base-100 shadow-xl p-5">
+  <!-- Books Table -->
+  <div class="overflow-x-auto">
+    <table class="table table-zebra w-full">
+      <thead>
+      <tr>
+        <th>#</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>ISBN</th>
+        <th>Rate</th>
+        <th>Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let book of returnedBooks.content; let i = index">
+        <th>{{ i + 1 }}</th>
+        <td>{{ book.title }}</td>
+        <td>{{ book.authorName }}</td>
+        <td>{{ book.isbn }}</td>
+        <td class="flex items-center">
+          <fa-icon [icon]="['fas', 'star']" class="text-yellow-400"></fa-icon> &nbsp; {{ book.rate }}
+        </td>
+        <td>
+          <div class="flex gap-2">
+            <fa-icon *ngIf="book.returned" [icon]="['fas', 'paper-plane']" class="text-blue-500"></fa-icon>
+            <fa-icon *ngIf="!book.returned" [icon]="['fas', 'paper-plane']" class="text-green-500 cursor-pointer"></fa-icon>
+            <fa-icon (click)="approveBookReturn(book)"
+                     [icon]="['far', 'circle-check']"
+                     [ngClass]="{'text-success': book.returnApproved}">
+            </fa-icon></div>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Pagination -->
+  <div class="flex justify-center mt-3">
+    <nav aria-label="Pagination">
+      <ul class="join">
+        <li>
+          <button (click)="goToFirstPage()" class="btn btn-sm join-item" [disabled]="page === 0">
+            <fa-icon [icon]="['fas', 'angles-left']"></fa-icon>
+          </button>
+        </li>
+        <li>
+          <button (click)="goToPreviousPage()" class="btn btn-sm join-item" [disabled]="page === 0">
+            <fa-icon [icon]="['fas', 'angle-left']"></fa-icon>
+          </button>
+        </li>
+        <li *ngFor="let pageIndex of pages">
+          <button (click)="gotToPage(pageIndex)" class="btn btn-sm join-item" [ngClass]="{ 'btn-active btn-primary': page === pageIndex }">
+            {{ pageIndex + 1 }}
+          </button>
+        </li>
+        <li>
+          <button (click)="goToNextPage()" class="btn btn-sm join-item" [disabled]="isLastPage">
+            <fa-icon [icon]="['fas', 'chevron-right']"></fa-icon>
+          </button>
+        </li>
+        <li>
+          <button (click)="goToLastPage()" class="btn btn-sm join-item" [disabled]="isLastPage">
+            <fa-icon [icon]="['fas', 'angles-right']"></fa-icon>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
