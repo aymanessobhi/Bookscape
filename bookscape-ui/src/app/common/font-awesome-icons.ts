@@ -23,7 +23,7 @@ import {
   faAngleRight,
   faChevronLeft,
   faChevronRight,
-  faHome, faPlus,
+  faHome, faPlus, faPaperPlane, faDoorOpen, faSearch,
 } from '@fortawesome/free-solid-svg-icons'; // Solid icons
 import {
   faFacebook,
@@ -64,5 +64,9 @@ export const fontAwesomeIcons: IconDefinition[] = [
   faTruckFast,
   faListCheck,
   faHome,
-  faPlus
+  faPlus,
+  faPaperPlane,
+  faCircleCheck,
+  faDoorOpen,
+  faSearch
 ];

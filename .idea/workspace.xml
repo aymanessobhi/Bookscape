@@ -21,6 +21,7 @@
       <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/specification/BookSpecification.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/utils/FileUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookScape.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BookScape.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book-scape/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/BookScapeApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/BookScapeApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/domain/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/domain/Book.java" afterDir="false" />
@@ -34,8 +35,6 @@
       <change beforePath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/service/Impl/AuthenticationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/service/Impl/AuthenticationServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book-scape/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/resources/application-dev.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book-scape/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/pages/manage/manage.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/pages/manage/manage.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/pages/my-books/my-books.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bookscape-ui/src/app/modules/book/pages/my-books/my-books.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +52,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/book-scape" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/bookscape-ui" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -108,6 +107,9 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\AYMAN ES-SOBHI\Desktop\BookScape\BookScape\bookscape-ui\src\app\services\guard" />
+      <recent name="C:\Users\AYMAN ES-SOBHI\Desktop\BookScape\BookScape\bookscape-ui\src\app\services\token" />
+      <recent name="C:\Users\AYMAN ES-SOBHI\Desktop\BookScape\BookScape\bookscape-ui\src\app\services\interceptor" />
       <recent name="C:\Users\AYMAN ES-SOBHI\Desktop\BookScape\BookScape\bookscape-ui\src\app\modules\book\pages" />
     </key>
   </component>
@@ -198,9 +200,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.api-gen" />
         <item itemvalue="Docker.docker-compose.yml.phpmyadmin: Compose Deployment" />
         <item itemvalue="HTTP Request.generated-requests | #3" />
-        <item itemvalue="npm.api-gen" />
       </list>
     </recent_temporary>
   </component>
@@ -239,7 +241,13 @@
       <workItem from="1738941085109" duration="14309000" />
       <workItem from="1738959686511" duration="13016000" />
       <workItem from="1739034478791" duration="7000" />
-      <workItem from="1739034936873" duration="10375000" />
+      <workItem from="1739034936873" duration="11251000" />
+      <workItem from="1739053357986" duration="7022000" />
+      <workItem from="1739092819257" duration="168000" />
+      <workItem from="1739101561525" duration="3781000" />
+      <workItem from="1739110706036" duration="7935000" />
+      <workItem from="1739125453931" duration="2633000" />
+      <workItem from="1739194556179" duration="5067000" />
     </task>
     <servers />
   </component>

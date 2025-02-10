@@ -207,7 +207,7 @@ public class BookServiceImpl implements IBookService {
         }
 
         User  user = ((User) connectedUser.getPrincipal());
-        if(Objects.equals(book.getOwner().getId(), user.getId())){
+        if(!Objects.equals(book.getOwner().getId(), user.getId())){
             throw new OperationNotPermittedException("You cannot borrow or return your own book");
         }
         BookTransactionHistory bookTransactionHistory = transactionHistoryRepository.findByBookIdAndOwnerId(bookId, user.getId())

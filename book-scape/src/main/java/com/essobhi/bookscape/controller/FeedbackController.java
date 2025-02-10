@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("feedbacks")
 @RequiredArgsConstructor
-@Tag(name="Book")
+@Tag(name="Feedback")
 public class FeedbackController {
     private final IFeedbackService feedbackService;
 
