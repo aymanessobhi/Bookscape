@@ -5,7 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="257d9695-eaa4-4366-8991-d6e2040ee75f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/controller/FeedbackController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/dto/BorrowedBookDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/dto/FeedbackDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/dto/PageResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/exception/OperationNotPermittedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/mapper/FeedbackMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/repository/FeedbackRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/repository/TransactionHistoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/security/OpenApiConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/service/IFeedbackService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/service/IFileStorageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/service/Impl/FeedbackServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/service/Impl/FileStorageServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/specification/BookSpecification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/utils/FileUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookScape.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BookScape.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-scape/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/BookScapeApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/BookScapeApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/domain/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/domain/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/domain/Feedback.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/domain/Feedback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/exception/GlobalException.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/exception/GlobalException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/security/BeanConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/security/BeanConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/security/JwtFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/security/JwtFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/service/Impl/AuthenticationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/java/com/essobhi/bookscape/service/Impl/AuthenticationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-scape/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/resources/application-dev.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-scape/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/book-scape/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,15 +44,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/bookscape-ui" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -34,6 +64,9 @@
         <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2oeyBRlkucJJsBUg6GOHZcgfMHS" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -53,12 +86,14 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;20&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/AYMAN ES-SOBHI/Desktop/trading_platform&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;888ed9f778f030454e2a0f15d6b9fc1b&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\AYMAN ES-SOBHI\\Desktop\\BookScape\\BookScape\\bookscape-ui\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -67,7 +102,24 @@
     ]
   }
 }</component>
-  <component name="RunManager">
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\AYMAN ES-SOBHI\Desktop\BookScape\BookScape\bookscape-ui\src\app\services\guard" />
+      <recent name="C:\Users\AYMAN ES-SOBHI\Desktop\BookScape\BookScape\bookscape-ui\src\app\services\token" />
+      <recent name="C:\Users\AYMAN ES-SOBHI\Desktop\BookScape\BookScape\bookscape-ui\src\app\services\interceptor" />
+      <recent name="C:\Users\AYMAN ES-SOBHI\Desktop\BookScape\BookScape\bookscape-ui\src\app\modules\book\pages" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.BookScapeApplication">
+    <configuration name="generated-requests | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="3" requestIdentifier="#3" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular Application (bookscape-ui)" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
     <configuration name="BookScapeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="book-scape" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.essobhi.bookscape.BookScapeApplication" />
@@ -75,6 +127,84 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="SwaggerCodegen">
+      <option name="activeConfigurationType" value="FILE" />
+      <option name="configurationPath" value="" />
+      <option name="customJreEnabled" value="false" />
+      <option name="customTemplatesPath" value="" />
+      <option name="enableDebugLogging" value="false" />
+      <option name="generateToPath" value="C:\Users\AYMAN ES-SOBHI\Desktop\BookScape\BookScape\gen" />
+      <option name="generationParameters">
+        <list />
+      </option>
+      <option name="generatorPath" value="https://repo1.maven.org/maven2/org/openapitools/openapi-generator-cli/5.0.0/openapi-generator-cli-5.0.0.jar" />
+      <option name="jdkPath" value="Default" />
+      <option name="language" value="java" />
+      <option name="specificationPath" value="C:\Users\AYMAN ES-SOBHI\Desktop\BookScape\BookScape\bookscape-ui\src\openapi\openapi.json" />
+      <method v="2" />
+    </configuration>
+    <configuration name="openapi.json" type="SwaggerCodegen">
+      <option name="activeConfigurationType" value="FILE" />
+      <option name="configurationPath" value="" />
+      <option name="customJreEnabled" value="false" />
+      <option name="customTemplatesPath" value="" />
+      <option name="enableDebugLogging" value="false" />
+      <option name="generateToPath" value="C:\Users\AYMAN ES-SOBHI\Desktop\BookScape\BookScape\gen" />
+      <option name="generationParameters">
+        <list />
+      </option>
+      <option name="generatorPath" value="https://repo1.maven.org/maven2/org/openapitools/openapi-generator-cli/5.0.0/openapi-generator-cli-5.0.0.jar" />
+      <option name="jdkPath" value="Default" />
+      <option name="language" value="java" />
+      <option name="specificationPath" value="C:\Users\AYMAN ES-SOBHI\Desktop\BookScape\BookScape\bookscape-ui\src\openapi\openapi.json" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.phpmyadmin: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="phpmyadmin" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular CLI Server (bookscape-ui)" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/bookscape-ui/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="api-gen" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/bookscape-ui/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="api-gen" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.api-gen" />
+        <item itemvalue="Docker.docker-compose.yml.phpmyadmin: Compose Deployment" />
+        <item itemvalue="HTTP Request.generated-requests | #3" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -91,10 +221,48 @@
       <workItem from="1731675739945" duration="11305000" />
       <workItem from="1731691134712" duration="6866000" />
       <workItem from="1731707389502" duration="8175000" />
+      <workItem from="1731945026722" duration="325000" />
+      <workItem from="1732030613933" duration="17684000" />
+      <workItem from="1732211468676" duration="13516000" />
+      <workItem from="1732548041367" duration="9105000" />
+      <workItem from="1732579828446" duration="4600000" />
+      <workItem from="1732637525750" duration="12976000" />
+      <workItem from="1732725968649" duration="8017000" />
+      <workItem from="1732745437143" duration="10005000" />
+      <workItem from="1732798974512" duration="3213000" />
+      <workItem from="1732831658140" duration="3117000" />
+      <workItem from="1733089491813" duration="6220000" />
+      <workItem from="1733177457418" duration="9276000" />
+      <workItem from="1733260853581" duration="5246000" />
+      <workItem from="1733321331012" duration="7611000" />
+      <workItem from="1733767553890" duration="2532000" />
+      <workItem from="1733782157357" duration="5418000" />
+      <workItem from="1734708793016" duration="66000" />
+      <workItem from="1738941085109" duration="14309000" />
+      <workItem from="1738959686511" duration="13016000" />
+      <workItem from="1739034478791" duration="7000" />
+      <workItem from="1739034936873" duration="11251000" />
+      <workItem from="1739053357986" duration="7022000" />
+      <workItem from="1739092819257" duration="168000" />
+      <workItem from="1739101561525" duration="3781000" />
+      <workItem from="1739110706036" duration="7935000" />
+      <workItem from="1739125453931" duration="2633000" />
+      <workItem from="1739194556179" duration="5067000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

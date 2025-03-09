@@ -1,0 +1,30 @@
+POST http://localhost:8080/api/books
+{:
+    "id" : "",
+    "title" : "Ayman@2003",
+    "authorName": "",
+    "isbn": "",
+    "synopsys": "",
+    "owner": "",
+    "cover": "",
+    "rate": "",
+    "archived": "",
+    "shareable": ""
+}:
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-12-01T225856.400.html
+
+###
+
+POST http://localhost:8080/api/books
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+

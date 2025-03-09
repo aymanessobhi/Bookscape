@@ -29,7 +29,7 @@ import java.util.stream.Collectors;
 public class User implements UserDetails, Principal {
     @Id
     @GeneratedValue
-    private Long id;
+    private Integer id;
     private String firstname;
     private String lastname;
     private LocalDate dateOfBirth;
@@ -40,6 +40,13 @@ public class User implements UserDetails, Principal {
     private boolean enabled;
     @ManyToMany(fetch = FetchType.EAGER)
     private List<Role> roles;
+
+    @OneToMany(mappedBy = "owner")
+    private List<Book> books;
+
+    @OneToMany(mappedBy = "user")
+    private List<BookTransactionHistory> histories;
+
     @CreatedDate
     @Column(nullable = false)
     private LocalDateTime createdDate;

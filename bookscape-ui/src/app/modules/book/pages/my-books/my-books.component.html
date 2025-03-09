@@ -1,0 +1,77 @@
+<h1 class="text-3xl font-bold text my-4">
+  My Books List
+</h1>
+<hr>
+<div class="flex justify-end mt-1">
+  <button class="btn btn-outline btn-primary">
+  <a [routerLink]="['/books/manage']">
+    <fa-icon [icon]="['fas', 'plus']"></fa-icon>&nbsp;New book
+  </a>
+  </button>
+</div>
+
+<div class="flex flex-wrap gap-2">
+  <app-book-card
+    [book]="book"
+    *ngFor="let book of bookResponse.content"
+    [manage]="true"
+    (archive)="archiveBook($event)"
+    (share)="shareBook($event)"
+    (edit)="editBook($event)">
+  </app-book-card>
+</div>
+
+<div class="flex justify-center mt-1">
+  <nav aria-label="Pagination">
+    <ul class="join">
+      <li>
+        <button
+          (click)="goToFirstPage()"
+          class="btn btn-sm join-item"
+          [disabled]="page === 0"
+        >
+          <fa-icon [icon]="['fas', 'angles-left']"></fa-icon>
+        </button>
+      </li>
+      <li>
+        <button
+          (click)="goToPreviousPage()"
+          class="btn btn-sm join-item"
+          [disabled]="page === 0"
+        >
+          <fa-icon [icon]="['fas', 'angle-left']"></fa-icon>
+        </button>
+      </li>
+      <li *ngFor="let pageIndex of pages">
+        <button
+          (click)="gotToPage(pageIndex)"
+          class="btn btn-sm join-item"
+          [ngClass]="{ 'btn-active btn-primary': page === pageIndex }"
+        >
+          {{ pageIndex + 1 }}
+        </button>
+      </li>
+      <li>
+        <button
+          (click)="goToNextPage()"
+          class="btn btn-sm join-item"
+          [disabled]="isLastPage"
+        >
+          <fa-icon [icon]="['fas', 'chevron-right']"></fa-icon>
+        </button>
+      </li>
+      <li>
+        <button
+          (click)="goToLastPage()"
+          class="btn btn-sm join-item"
+          [disabled]="isLastPage"
+        >
+          <fa-icon [icon]="['fas', 'angles-right']"></fa-icon>
+        </button>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+
+

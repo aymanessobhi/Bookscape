@@ -1,0 +1,76 @@
+<div
+  class="card w-80 h-[450px] border bg-base-100 shadow-xl overflow-hidden"
+  [ngClass]="{
+    'border-success': book.shareable,
+    'border-warning': book.archived
+  }"
+>
+  <figure>
+    <img [src]="bookCover" alt="Book cover" class="h-70 w-full object-cover" />
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title text-sm font-bold flex items-center">
+      <fa-icon [icon]="['fas', 'book']" class="mr-2 mt-1" size="lg"></fa-icon>
+      {{ book.title }}
+    </h2>
+    <h3 class="text-sm text-gray-500 flex items-center">
+      <fa-icon [icon]="['fas', 'user-check']" class="mr-2 mt-1" size="lg"></fa-icon>
+      {{ book.authorName }}
+    </h3>
+    <h4 class="text-sm text-gray-500 flex items-center">
+      <fa-icon [icon]="['fas', 'code']" class="mr-2 mt-1" size="lg"></fa-icon>
+      {{ book.isbn }}
+    </h4>
+    <h5 class="text-sm text-gray-500 flex items-center">
+      <fa-icon [icon]="['fas', 'user']" class="mr-2 mt-1" size="lg"></fa-icon>
+      {{ book.owner }}
+    </h5>
+    <hr class="my-2" />
+    <p class="text-sm truncate">{{ book.synopsis }}</p>
+  </div>
+  <div class="card-actions justify-between p-4">
+    <div class="d-flex gap-2">
+      <app-rating [rating]="book.rate || 0"></app-rating>
+    </div>
+    <div class="flex gap-2" *ngIf="!manage">
+      <fa-icon
+        [icon]="['fas', 'circle-info']"
+        class="text-primary cursor-pointer mt-1"
+        size="lg"
+        (click)="onShowDetails()"
+      ></fa-icon>
+      <fa-icon
+        [icon]="['fas', 'list-check']"
+        class="text-primary cursor-pointer mt-1"
+        size="lg"
+        (click)="onBorrow()"
+      ></fa-icon>
+      <fa-icon
+        [icon]="['fas', 'heart']"
+        class="text-red-500 cursor-pointer mt-1"
+        size="lg"
+        (click)="onAddToWaitingList()"
+      ></fa-icon>
+    </div>
+    <div class="flex gap-2" *ngIf="manage">
+      <fa-icon
+        [icon]="['fas', 'edit']"
+        class="text-green-500 cursor-pointer mt-1"
+        size="lg"
+        (click)="onEdit()"
+      ></fa-icon>
+      <fa-icon
+        [icon]="['fas', 'share-nodes']"
+        class="text-primary cursor-pointer mt-1"
+        size="lg"
+        (click)="onShare()"
+      ></fa-icon>
+      <fa-icon
+        [icon]="['fas', 'archive']"
+        class="text-red-500 cursor-pointer mt-1"
+        size="lg"
+        (click)="onArchive()"
+      ></fa-icon>
+    </div>
+  </div>
+</div>

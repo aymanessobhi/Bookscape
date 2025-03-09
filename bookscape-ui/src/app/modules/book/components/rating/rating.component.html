@@ -1,0 +1,11 @@
+<div class="d-flex gap-2">
+  <ng-container *ngFor="let _ of [].constructor(fullStars)">
+    <fa-icon [icon]="['fas', 'star']" class="text-warning"></fa-icon>
+  </ng-container>
+  <ng-container *ngIf="hasHalfStar">
+    <fa-icon [icon]="['fas', 'star-half']" class="text-warning"></fa-icon>
+  </ng-container>
+  <ng-container *ngFor="let _ of [].constructor(emptyStars)">
+    <fa-icon [icon]="['fas', 'star']" class="text-gray-400"></fa-icon>
+  </ng-container>
+</div>
